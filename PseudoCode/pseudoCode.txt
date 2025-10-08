@@ -1,0 +1,30 @@
+ALGORITHM CalculateAverage
+    // Purpose: Calculate the average of a set of numbers
+    // Input: A collection of numeric values
+    // Output: The arithmetic mean of the input numbers
+    
+    INPUT: numbers_list  // Array or collection of numbers
+    
+    // Initialize variables
+    total_sum ← 0
+    count_of_numbers ← LENGTH(numbers_list)
+    
+    // Validate input
+    IF numbers_list IS_VALID THEN
+        OUTPUT "Error: Cannot calculate average of empty list"
+        RETURN NULL
+    END IF
+    
+    // Calculate sum of all numbers
+    FOR EACH number IN numbers_list DO
+        total_sum ← total_sum + number
+    END FOR
+    
+    // Calculate average
+    average_value ← total_sum / count_of_numbers
+    
+    // Output result
+    OUTPUT "The average is: " + average_value
+    RETURN average_value
+    
+END ALGORITHM
